@@ -4,10 +4,11 @@
     <title>Codeaholics Jan 2014</title>
   </head>
   <body>
+    <!-- Initial loading -->
+        
     <img src="images/codeaholics_hk.png">
     
     <h1>Happy Coding 2014 !</h1>
-    
     <p>process.version: <script>document.write(process.version)</script></p>
     <p>process.platform: <script>document.write(process.platform)</script></p>    
     <p>process.title: <script>document.write(process.title)</script></p>
@@ -15,5 +16,112 @@
     <br/>
     
     <p>list of node.js process properties: <a href="http://nodejs.org/api/process.html">http://nodejs.org/api/process.html</a></p>
+    
+    <br/>
+    
+
+    <!-- Kiosk Mode -->
+    <!--
+    <hr/>
+    
+    <button onclick="startKioskMode()">Start Kiosk Mode</button>
+    <button onclick="stopKioskMode()">Stop Kiosk Mode</button>    
+    
+    <script>
+    function startKioskMode() {
+      var gui = require('nw.gui');
+      gui.Window.get().enterKioskMode();      
+    }
+    
+    function stopKioskMode() {
+      var gui = require('nw.gui');
+      gui.Window.get().leaveKioskMode();
+    }   
+
+    </script>
+    -->
+
+
+    <!-- File interaction -->
+    <!--
+    <hr/>
+    <input style="display:none;" id="fileDialog" type="file" />
+    <button onclick="chooseFile('#fileDialog')">Read file input value</button><br/>
+    <script>
+      function chooseFile(name) {
+        var chooser = document.querySelector(name);
+        chooser.addEventListener("change", function(evt) {
+          alert("selected file: " + this.value);
+        }, false);
+
+        chooser.click();
+      }
+    </script>
+      
+    Select multiple files: <input type="file" multiple /><br/>
+      
+    Save as file: <input type="file" nwsaveas /><br/>
+    -->
+      
+      
+    <!-- Calling desktop function -->
+    <!--
+    <hr/>
+    <input type="text" id="target-file-name" />
+    <button onclick="openTextFile()">Open Text File Using Desktop</button><br/>
+    <script>
+      function openTextFile() {
+        var gui = require('nw.gui');
+        var inputTargetFileName = document.getElementById("target-file-name").value;
+      
+        gui.Shell.openItem(inputTargetFileName);
+      }
+    </script>
+    -->
+      
+      
+    <!-- HTML5 javascript API -->
+    
+    <!--
+      <div style="width:352px; height:625px; margin:0 auto; background-color:#fff;" >
+          <div>
+            <video id="camFeed" width="320" height="240" autoplay></video>
+        </div>
+
+          <div>
+              <canvas id="photo" width="320" height="240"></canvas>
+          </div>
+
+          <div style="margin:0 auto; width:82px;">
+              <input type="button" value="Take Photo" onclick="takePhoto();">
+          </div>
+      </div>
+      
+      <script>
+        function init() {
+          if (navigator.webkitGetUserMedia) {
+              navigator.webkitGetUserMedia({video:true}, onSuccess, onFail);
+          } else {
+              alert('webRTC not available');
+          }
+        }
+
+        function onSuccess(stream) {
+          document.getElementById('camFeed').src = webkitURL.createObjectURL(stream);
+        }
+
+        function onFail() {
+          alert('could not connect stream');
+        }
+
+        function takePhoto() {
+          var c = document.getElementById('photo');
+          var v = document.getElementById('camFeed');
+          c.getContext('2d').drawImage(v, 0, 0, 320, 240);
+        }
+      
+        init();
+      </script>
+     -->
   </body>
 </html>

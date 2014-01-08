@@ -7,7 +7,7 @@
   "window": {
     "title": "sample node-webkit demo",
     "toolbar": false,
-    "frame": true,
+    "frame": false,
     "width": 800,
     "height": 600,
     "position": "mouse", 
