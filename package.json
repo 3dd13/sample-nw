@@ -1,0 +1,8 @@
+{
+  "name": "sample-nw",
+  "description": "A sample desktop HTML5 webapp with grunt node webkit builder",
+  "devDependencies": {
+      "grunt": "~0.4.1",
+      "grunt-node-webkit-builder": "~0.1.14"
+    }
+}

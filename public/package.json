@@ -1,0 +1,22 @@
+{
+  "name": "sample-nw",
+  "description": "bare setup of node-webkit",  
+  "main": "index.html",
+  "version": "0.0.1",
+  "keywords": [ "codeaholics", "node-webkit", "grunt-node-webkit-builder" ],
+  "window": {
+    "title": "sample node-webkit demo",
+    "toolbar": false,
+    "frame": true,
+    "width": 800,
+    "height": 600,
+    "position": "mouse", 
+    "min_width": 400,
+    "min_height": 200,
+    "max_width": 1024,
+    "max_height": 800
+  },
+  "webkit": {
+    "plugin": true
+  }  
+}
